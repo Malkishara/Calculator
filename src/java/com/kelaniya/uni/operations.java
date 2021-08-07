@@ -8,8 +8,7 @@ public class operations {
  public static int b;
 
 public static int operation(int a,int b){
-    System.out.println(a);
-    System.out.println(b);
+
     System.out.println("1.For addition\n2.For substraction\n3.For multiple\n");
     System.out.println("Enter your choice:");
     Scanner s1=new Scanner(System.in);
