@@ -17,8 +17,10 @@ public class OperationFactory {
             case "mul":
                 operation = new MulOperation();
                 break;
+            case "div":
+                operation = new DivOperation();
+                break;
         }
-
         return operation;
     }
 }
