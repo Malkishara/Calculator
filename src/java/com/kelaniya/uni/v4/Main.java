@@ -2,6 +2,7 @@ package com.kelaniya.uni.v4;
 
 import com.kelaniya.uni.v4.operation.Operation;
 import com.kelaniya.uni.v4.operation.OperationFactory;
+import com.kelaniya.uni.v5.ui.CmdLineUI;
 
 import java.io.IOException;
 
@@ -22,7 +23,7 @@ public class Main {
         Operation operation = operationFactory.getInstance(operator);
         Double result = operation.execute(numbers);
 
-        UI ui = new UI();
+        CmdLineUI ui = new CmdLineUI();
         ui.showMessage("The result is " + result);
 
     }
