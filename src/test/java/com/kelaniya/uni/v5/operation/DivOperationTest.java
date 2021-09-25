@@ -9,15 +9,17 @@ import static org.junit.Assert.*;
 public class DivOperationTest {
 
 @Test
-public void should_divide_positive_values(){
+public void should_divide_positive_values() throws InvalidCalcOperationException {
   DivOperation divOperation=new DivOperation();
   Double result =divOperation.execute(new Double[]{6.0,3.0});
     assertThat(result, is(2.0));
 }
     @Test
-    public void should_not_divide_by_zeros(){
+    public void should_not_divide_by_zeros() throws InvalidCalcOperationException{
         DivOperation divOperation=new DivOperation();
-        Double result =divOperation.execute(new Double[]{6.0,0.0});
+        assertThrows(InvalidCalcOperationException.class,()-> {
+            divOperation.execute(new Double[]{6.0, 0.0});
+        });
 
     }
 
